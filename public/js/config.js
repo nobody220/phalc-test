@@ -56,7 +56,7 @@ app.config(['$stateProvider', '$urlRouterProvider', '$httpProvider',
                 }
             })
 
-            .state('test',{
+            .state('home.test',{
                 url:    '/test',
                 templateUrl: '/index/test',
                 title: 'TEST'                      // loaded na ung script kaya no need to include
