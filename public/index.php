@@ -1,18 +1,20 @@
-<!--
-  index.php
-  index.phtml
-  config.js
-  login.js
-  auth.phtml
-  home.js
-  home.phtml
-  activity.phtml
-  IndexController.php
-  test,phtml
--->
 
 
 <?php
+/*
+index.php
+index.phtml
+config.js
+login.js
+auth.phtml
+home.js
+home.phtml
+activity.phtml
+IndexController.php
+test,phtml
+*/
+
+
 //error_reporting(0);
 error_reporting(E_ALL & ~E_NOTICE & ~E_DEPRECATED);
 
