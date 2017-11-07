@@ -1,0 +1,44 @@
+SET
+	 <var>   =   new <modelName>();
+	 <var>-><fieldName>	= "<value>";
+
+	 if(<var>->create()){
+
+	 }
+
+
+GET
+	<var>   =   <modelName>::query()->execute();
+
+	if(<var>){
+
+	}
+
+
+GET INFO
+	<var>  =   <modelName>::findFirst("<fieldName> = ".$<parameter>);
+
+	if(<var>){
+
+	}
+
+SEARCH
+	<var>  =   <modelName>::query()
+                ->where("<fieldName> LIKE ?1")
+                ->orwhere("<fieldName> LIKE ?1")
+                -> bind(array(
+                    1 => '%'.$<parameter>.'%'
+                ))->execute();
+
+    if(<var>){
+
+    }
+
+DELETE
+	<var>   =   <modelName>::findFirst("<fieldName> = ".$<parameter>);
+
+	if(<var>){
+		if(<var>->delete()){
+
+		}
+	}

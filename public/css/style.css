@@ -1,0 +1,71 @@
+ /* LOGIN STYLE */
+
+
+
+/* END OF LOGIN STYLE */
+
+/* HOME STYLE */
+
+.welcome span{
+	background-color:blue;
+}
+
+/* END OF HOME STYLE */
+
+
+/* ACTIVITY STYLE */
+
+.info{
+		position: absolute;
+
+		width: 330px;
+		height: 300px;
+		/*margin-left: 38%;*/
+
+		margin-left:38%;
+
+		text-align: center;
+		padding-bottom: 15px;
+		border: 1px solid grey;
+		border-radius: 10px;
+		background-color:lightgray;
+		-webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+		-moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+		box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+	}
+
+/* TABLE */
+.tableTop{
+	width: 100%;
+	height: auto;
+}
+.tableTop .crudButtons{
+	margin-left: 5%;
+}
+.tableTop .searchPart{
+	margin-right: 5%;	
+}
+.records{
+	/*overflow-x: auto;*/
+	width: 100%;
+	height: auto;
+}
+.records table{
+	margin: 0 auto;
+	width: 90%;
+	border-collapse: collapse;
+}
+.records table, td, th{
+	border: 1px solid #ddd;
+}
+.records th{
+	background-color:royalblue;
+	color: white;
+	height: 50px;
+}
+.records tr:hover{
+	background-color: #f2f2f2;
+}
+
+
+/* END OF ACTIVITY STYLE */

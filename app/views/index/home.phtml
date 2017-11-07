@@ -1,0 +1,17 @@
+<div class="welcome container" ng-controller="HomeCtrl as hctrl">
+	<span>
+		<p>
+			Welcome <?php echo $this->session->get('username'); ?>
+			<button ng-click="logoutData()">Logout</button>
+		</p>
+	</span>
+
+	<div ui-view></div>
+
+	<br/>
+
+	<!-- <div>
+		<a ui-sref="home.activity">Activity</a>
+	</div> -->
+
+</div>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+        <html data-ng-app="Training" data-ng-controller="TrainingCtrl as trctrl">
+
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Training</title>
+        <link href="css/style.css" rel="stylesheet">
+        <link rel="stylesheet" href="vendors/bower_components/bootstrap/css/login.css" />
+
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
+    </head>
+
+    <body>
+        <base href="/">
+        <?php echo $this->getContent(); ?>
+        <div ui-view class="content-page" id="initial-page-content"></div>
+
+        <script type="text/javascript">
+            var baseUrl =   '<?php echo $this->baseurl; ?>',
+                logId       = '<?php echo $this->session->get('username')?>';
+        </script>
+        <script type="text/javascript" src="vendors/bower_components/jquery/dist/jquery.min.js"></script>
+        <script type="text/javascript" src="vendors/bower_components/bootstrap/js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="vendors/bower_components/angular/angular.min.js"></script>
+        <script type="text/javascript" src="vendors/bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
+        <script type="text/javascript" src="vendors/bower_components/oclazyload/dist/ocLazyLoad.min.js"></script>
+        <script type="text/javascript" src="js/app.js"></script>
+        <script type="text/javascript" src="js/config.js"></script>
+        <script type="text/javascript" src="js/controllers/main.js"></script>
+        <script type="text/javascript" src="vendors/bower_components/temporary/classie.js"></script>
+
+    </body>
+</html>

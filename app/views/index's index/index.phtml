@@ -1,0 +1,82 @@
+<style type="text/css">
+	.info{
+		width: 330px;
+		height: 300px;
+		/*margin-left: 38%;*/
+		text-align: center;
+		padding-bottom: 15px;
+		border: 1px solid grey;
+		border-radius: 10px;
+		background-color:lightgray;
+		-webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+		-moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+		box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+	}
+	button{
+		width: 25%;
+		height: 35px;
+		text-align: center;
+	}
+	button:hover{
+		border-radius:7px;
+		background-color:royalblue;
+		color:white;
+	}
+</style>
+<div ng-controller="TrainingCtrl as trctrl">
+	<div class="info">
+			<p><input name="fName" type="text" ng-model="form.firstName" placeholder="First Name" /></p>
+			<p><input name="lName" type="text" ng-model="form.lastName" placeholder="Last Name" /></p>
+			<p><input name="eMail" type="text" ng-model="form.email" placeholder="Email" /></p>
+			<p><input name="password" type="text" ng-model="form.password" placeholder="Password" /></p>
+
+			<p style="margin-left: 40%;"> Status:
+				<select id="comboBox" class="combobox" ng-model="form.selectStatus">
+					<option class="hidden"></option>
+					<option value="Admin">Admin</option>
+					<option value="Guest">Guest</option>
+				</select>
+			</p>
+
+			<button ng-click="setData()">Save</button>
+			<button ng-click="getInfo()">Edit</button>
+			<button ng-click="deleteData()">Delete</button>
+		</p>
+	</div>
+
+	<div class="details">
+		<p style="float: right;">
+			<input type="text" placeholder="Search Last Name" ng-model="search" ng-change="filterData(search)" />
+			<!-- <button ng-click="searchData(search)">Search</button> -->
+			<!-- <button ng-click="getData()">Cancel</button> -->
+		</p>
+	</div>
+
+		<!--<h1>Name: {{firstName}} {{lastName}}</h1>
+		<h2>Email: {{email}}</h2>
+		<h2>Password: {{password}}</h2>-->
+
+
+
+	<table style="width: 100%;" border="1">
+		<thead>
+			<tr>
+				<th style="width: 2%; text-align: center">*</th>
+				<th style="width: 20%; text-align: center;">Last Name</th>
+				<th style="width: 20%; text-align: center;">First Name</th>
+				<th style="width: 20%; text-align: center;">Email</th>
+				<th style="width: 20%; text-align: center;">Password</th>
+				<th style="width: 20%; text-align: center;">Status</th>
+			</tr>
+		</thead>
+
+		<tbody ng-repeat="user in users">
+			<td style="text-align: center"><input type="checkbox" class="checkbox" value="{{ user.id }}"></td>
+			<td style="text-align: center"> {{ user.lastName }} </td>
+			<td style="text-align: center"> {{ user.firstName }} </td>
+			<td style="text-align: center"> {{ user.email }} </td>
+			<td style="text-align: center"> {{ user.password }} </td>
+			<td style="text-align: center"> {{ user.status }} </td>
+		</tbody>
+	</table>
+</div>

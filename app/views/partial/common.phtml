@@ -1,0 +1,5 @@
+<header id="header" data-current-skin={{uxctrl.currentSkin}}  data-ng-include="'<?php echo $this->baseurl.'/partial/header';?>'" ></header>
+<section id="main">
+    <aside id="sidebar" data-ng-include="'<?php echo $this->baseurl.'/partial/mainmenu';?>'" data-ng-class="{ 'toggled': uxctrl.sidebarToggle.left === true }"></aside>
+    <section id="content" class="page-view" data-ui-view></section>
+</section>
