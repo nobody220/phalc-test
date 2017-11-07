@@ -4,6 +4,10 @@ use Phalcon\Mvc\View,
 
 class IndexController extends ControllerBase{
 
+    public function testAction(){
+        $this->view->setRenderLevel(View::LEVEL_ACTION_VIEW);
+    }
+
     public function indexAction(){
 
     }

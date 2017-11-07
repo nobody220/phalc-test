@@ -4,7 +4,7 @@ app.config(['$stateProvider', '$urlRouterProvider', '$httpProvider',
     		var tpl 		= 	logId == '' ? '/index/auth' : '/index/home';
     		var newState 	= 	logId == '' ? '/login' : 'home';
     		var newTitle 	= 	logId == '' ? '/Login' : 'dashboard';
-        
+
         $urlRouterProvider.otherwise(landing);
         $stateProvider
             .state(newState,{
@@ -54,6 +54,12 @@ app.config(['$stateProvider', '$urlRouterProvider', '$httpProvider',
                             ])
                     }
                 }
+            })
+
+            .state('test',{
+                url:    '/test',
+                templateUrl: '/index/test',
+                title: 'TEST'                      // loaded na ung script kaya no need to include
             })
 
             // .state('home.contact',{
